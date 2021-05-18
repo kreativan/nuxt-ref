@@ -1,3 +1,5 @@
+# dadjokes
+
 ## Build Setup
 
 ```bash
@@ -14,9 +16,6 @@ $ npm run start
 # generate static project
 $ npm run generate
 ```
-
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
 ### UIkit
 ```
@@ -35,3 +34,7 @@ Add nuxt-vuikit to modules section of your nuxt.config.js
   }
 }
 ```
+
+
+
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
