@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/location/tr", {data:[{}],fetch:{"0":{_error:{message:"invalid json response body at https:\u002F\u002Frandomuser.me\u002Fapi\u002F?nat=tr&results=20 reason: Unexpected token \u003C in JSON at position 0",type:"invalid-json",statusCode:500}}},mutations:void 0});
