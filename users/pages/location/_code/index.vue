@@ -1,7 +1,7 @@
 <!-- code -->
 <template>
   <div class="uk-container">
-    <h1 v-if="!spinner" class="uk-text-center uk-flex uk-flex-middle uk-flex-center">
+    <h1 class="uk-text-center uk-flex uk-flex-middle uk-flex-center">
       <img :src='location.flag' width="90" height="90"/>
       <span class="uk-margin-left">{{ location.name }}</span>
     </h1>
@@ -25,6 +25,7 @@
 
 <script>
 export default {
+  props: ['country'],
   head() {
     return {
       title: this.location.name,
@@ -56,6 +57,8 @@ export default {
       console.log(error)
     }
 
+  },
+  async created() {
     try {
       const get_users = await fetch(`https://randomuser.me/api/?nat=${this.code}&results=20`)
       const usersData = await get_users.json()
@@ -64,10 +67,8 @@ export default {
     } catch (error) {
       console.log(error)
     }
-    
     this.spinner = false;
-
-  },
+  }
 }
 </script>
 
