@@ -47,15 +47,23 @@ export default {
   },
   async fetch() {
 
-    const get_countries = await fetch(`https://restcountries.eu/rest/v2/alpha/${this.code}`)
-    const locationData = await get_countries.json()
-    // console.log(data)
-    this.location = locationData
+    try {
+      const get_countries = await fetch(`https://restcountries.eu/rest/v2/alpha/${this.code}`)
+      const locationData = await get_countries.json()
+      // console.log(data)
+      this.location = locationData 
+    } catch (error) {
+      console.log(error)
+    }
 
-    const get_users = await fetch(`https://randomuser.me/api/?nat=${this.code}&results=20`)
-    const usersData = await get_users.json()
-    //console.log(usersData.results);
-    this.users = usersData.results
+    try {
+      const get_users = await fetch(`https://randomuser.me/api/?nat=${this.code}&results=20`)
+      const usersData = await get_users.json()
+      //console.log(usersData.results);
+      this.users = usersData.results 
+    } catch (error) {
+      console.log(error)
+    }
     
     this.spinner = false;
 
