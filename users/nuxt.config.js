@@ -15,7 +15,7 @@ export default {
 
   target: 'static',
   router: {
-    base: '/nuxt-ref/users/',
+    base: '/nuxt-ref/users/dist/',
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
