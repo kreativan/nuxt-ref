@@ -11,6 +11,12 @@ export default {
       { hid: 'description', name: 'description', content: '' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    headers: [
+      {
+        hey: 'permissions-policy',
+        value: 'interest-cohort=()',
+      },
+    ],
   },
 
   target: 'static',
