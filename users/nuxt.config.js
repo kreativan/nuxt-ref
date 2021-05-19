@@ -13,6 +13,11 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
+  target: 'static',
+  router: {
+    base: '/nuxt-ref/users/',
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
@@ -38,7 +43,7 @@ export default {
   // vuikit config
   vuikit: {
     defaultTheme: true,
-    icons: true
+    icons: true,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
