@@ -19,6 +19,10 @@ export default {
     ],
   },
 
+  generate: {
+    fallback: '404.html',
+  },
+
   target: 'static',
   router: {
     base: '/nuxt-ref/users/dist/',
