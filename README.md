@@ -1,3 +1,5 @@
+https://kreativan.github.io/nuxt-ref/users/dist/
+
 ## Build Setup
 
 ```bash
