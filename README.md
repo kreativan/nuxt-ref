@@ -35,3 +35,11 @@ Add nuxt-vuikit to modules section of your nuxt.config.js
   }
 }
 ```
+
+### Git
+```
+git add .
+git commit -m "Initial Commit"
+git remote add origin https://github.com/YOUR_USERNAME/NEW_REPO_NAME.git
+git push -u origin main
+```
