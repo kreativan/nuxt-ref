@@ -8,7 +8,7 @@
     <div v-if="spinner" class="uk-padding-large uk-text-center uk-text-primary">
       <vk-spinner ratio="1.5"></vk-spinner>
     </div>
-    <vk-grid class="uk-child-width-1-5@l uk-child-width-1-4@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small">
+    <vk-grid v-if="!spinner" class="uk-child-width-1-5@l uk-child-width-1-4@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small">
       <div v-for='(user, index) in users' :key="index">
         <Card
           :image="user.picture.large"
@@ -56,7 +56,7 @@ export default {
   },
   methods: {
     async userSearch(text, gender) {
-
+      this.spinner = true;
       const response = await fetch(`https://randomuser.me/api/?results=10&gender=${gender}`)
       const data = await response.json()
       //console.log(data);
@@ -65,6 +65,7 @@ export default {
   
     },
     async filterGender(gender) {
+      this.spinner = true;
       const response = await fetch(`https://randomuser.me/api/?results=10&gender=${gender}`)
       const data = await response.json()
       //console.log(data);
