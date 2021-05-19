@@ -59,7 +59,7 @@ export default {
 
       const response = await fetch(`https://randomuser.me/api/?results=10&gender=${gender}`)
       const data = await response.json()
-      console.log(data);
+      //console.log(data);
       this.users = data.results
       this.spinner = false;
   
@@ -67,7 +67,7 @@ export default {
     async filterGender(gender) {
       const response = await fetch(`https://randomuser.me/api/?results=10&gender=${gender}`)
       const data = await response.json()
-      console.log(data);
+      //console.log(data);
       this.users = data.results
       this.spinner = false;
     }
